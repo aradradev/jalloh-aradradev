@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
 import TypeWriterLetters from '../TypeWriterLetters';
+import Logo from '../Logo';
+import Loader from 'react-loaders';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = [
@@ -55,7 +57,8 @@ const Home = () => {
             <br />
             <span className={`${letterClass} _13`}>I</span>
             <span className={`${letterClass} _14`}>'m </span>
-            <span className={`${letterClass} _15 logo3d`}>J</span>
+            <span className={`${letterClass} _15`}> </span>
+            <span className={`${letterClass} _16 logo3d`}>J</span>
             <TypeWriterLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -73,7 +76,9 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
+        <Logo />
       </div>
+      <Loader type="pacman" />
     </>
   );
 };
